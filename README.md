@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VehicleMind AI
 
 A full-stack AI learning project built with React, TypeScript, Python, and FastAPI.
@@ -38,3 +39,7 @@ npm run dev
 ```
 
 Frontend: http://localhost:5173
+=======
+# vehiclemind-ai
+Full-stack AI vehicle intelligence platform
+>>>>>>> bb1340f73bce230495185ec6f3258a8a56d2b87c
