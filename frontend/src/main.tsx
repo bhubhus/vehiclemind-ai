@@ -10,7 +10,7 @@ function App() {
 
   const checkBackend = async () => {
     try {
-      const response = await axios.get(`${API_URL}/health`);
+      const response = await axios.get(`${API_URL}health`);
       setStatus(response.data.message);
     } catch {
       setStatus('Backend is unavailable');
