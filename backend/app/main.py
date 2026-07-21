@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import Base, engine
 from app.routers.vehicles import router as vehicles_router
-
+from app.routers.ai import router as ai_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -28,8 +28,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(vehicles_router)
 
+app.include_router(vehicles_router)
+app.include_router(ai_router)
 
 @app.get("/")
 def root() -> dict[str, str]:
@@ -43,3 +44,4 @@ def health() -> dict[str, str]:
     return {
         "message": "FastAPI connected successfully"
     }
+
